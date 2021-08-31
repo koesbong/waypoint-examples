@@ -11,7 +11,7 @@ app "example-nodejs" {
 
     registry {
       use "docker" {
-        image = "gcr.io/<my-project-name>/example-nodejs"
+        image = "gcr.io/<my-project-id>/example-nodejs"
         tag   = "latest"
       }
     }
@@ -19,7 +19,7 @@ app "example-nodejs" {
 
   deploy {
     use "google-cloud-run" {
-      project  = "<my-project-name>"
+      project  = "<my-project-id>"
       location = "us-east1"
 
       port = 5000
